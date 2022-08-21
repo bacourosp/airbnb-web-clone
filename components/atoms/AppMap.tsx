@@ -12,8 +12,7 @@ const AppMap: FC<IAppMap> = ({ children, center }) => {
     zoom: 12,
   });
 
-  return;
-  /* return (
+  return (
     <ReactMapGL
       {...viewport}
       mapStyle={process.env.NEXT_PUBLIC_MAPBOX_STYLE}
@@ -24,7 +23,7 @@ const AppMap: FC<IAppMap> = ({ children, center }) => {
     >
       {children}
     </ReactMapGL>
-  ); */
+  );
 };
 
 export default AppMap;

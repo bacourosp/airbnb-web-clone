@@ -22,11 +22,9 @@ const AppHero = () => {
             Not sure where to go? Perfect.
           </h1>
           <div className="text-center">
-          <Link href="/search" as={`/search`}>
             <button className="px-8 py-2 mx-auto mt-4 text-sm font-medium text-white duration-150 rounded-md sm:py-3 active:scale-90 text-md bg-primary md:mx-0 hover:shadow-xl lg:text-base">
-              I&apos;m flexible
+              <Link href="/search">I&apos;m flexible</Link>
             </button>
-          </Link>  
           </div>
         </div>
       </div>

@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { StarIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
 
+/* <Link href="/boats/[id]/[boat]" as={`/boats/${data.title}/${data.description}`}> */
+
 const AppPlaceCard = ({ data }) => {
   return (
-    /* <Link href="/boats/[id]/[boat]" as={`/boats/${data.title}/${data.description}`}> */
-    <Link href="/boats/[id]" as={`/boats/${data.title}`}>
     <div className="grid sm:grid-cols-[300px,1fr] py-5 border-gray-200 cursor-pointer sm:border-t grid-cols-1 gap-x-4">
       {/* left - image */}
       <div className="relative w-full mb-2 md:mb-0 sm:h-44 h-52">
@@ -30,7 +30,9 @@ const AppPlaceCard = ({ data }) => {
           <hr className="hidden w-10 mt-3 mb-1 border-b border-gray-200 border-opacity-60 sm:block" />
           <span className="text-sm text-gray-300">{data.description}</span>
         </div>
-
+        <Link href="/boats/[id]" as={`/boats/${data.title}`}>
+          OPEN
+        </Link>
         {/* detail bottom */}
         <div className="flex justify-between order-first sm:order-none">
           <div className="flex items-center">
@@ -45,7 +47,6 @@ const AppPlaceCard = ({ data }) => {
         </div>
       </div>
     </div>
-    </Link>
   );
 };
 
