@@ -1,9 +1,12 @@
 import Image from 'next/image';
 // icons
 import { StarIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 const AppPlaceCard = ({ data }) => {
   return (
+    /* <Link href="/boats/[id]/[boat]" as={`/boats/${data.title}/${data.description}`}> */
+    <Link href="/boats/[id]" as={`/boats/${data.title}`}>
     <div className="grid sm:grid-cols-[300px,1fr] py-5 border-gray-200 cursor-pointer sm:border-t grid-cols-1 gap-x-4">
       {/* left - image */}
       <div className="relative w-full mb-2 md:mb-0 sm:h-44 h-52">
@@ -42,6 +45,7 @@ const AppPlaceCard = ({ data }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
